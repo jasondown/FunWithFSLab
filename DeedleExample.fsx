@@ -44,14 +44,14 @@ Chart.Geo(change)
 |> Chart.WithOptions(Options(colorAxis=axis))
 
 let codes =
-    [ "CO2", inds.``CO2 emissions (metric tons per capita)``
-      "Uni-F", inds.``School enrollment, tertiary, female (% gross)``
-      "Uni-M", inds.``School enrollment, tertiary, male (% gross)``
-      "Life", inds.``Life expectancy at birth, total (years)``
-      "Growth", inds.``GDP per capita growth (annual %)``
-      "Pop", inds.``Population growth (annual %)``
-      "GDP", inds.``GDP per capita (current US$)`` ]
+    [ "CO2 Emissions", inds.``CO2 emissions (metric tons per capita)``
+      "University-F", inds.``School enrollment, tertiary, female (% gross)``
+      "University-M", inds.``School enrollment, tertiary, male (% gross)``
+      "Life Exp.", inds.``Life expectancy at birth, total (years)``
+      "GDP Growth", inds.``GDP per capita growth (annual %)``
+      "Pop. Growth", inds.``Population growth (annual %)``
+      "Current GDP", inds.``GDP per capita (current US$)`` ]
 
 let world = 
   frame [ for name, ind in codes -> 
-            name, getData 2010 ind.IndicatorCode ]
+            name, getData 2012 ind.IndicatorCode ]
